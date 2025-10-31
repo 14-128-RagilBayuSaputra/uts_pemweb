@@ -1,0 +1,33 @@
+/* Di dalam file: src/components/Navigation.module.css */
+
+.navContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 0;
+  border-bottom: 2px solid #374151; /* Garis pemisah */
+}
+
+.navButton {
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #d1d5db; /* Teks abu-abu */
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.navButton:hover {
+  background-color: #374151; /* Latar saat di-hover */
+  color: white;
+}
+
+/* Style untuk tombol yang sedang AKTIF */
+.navButton.active {
+  color: white;
+  border-color: #059669; /* Border hijau (sama dengan tombol Cari) */
+  background-color: #374151;
+}

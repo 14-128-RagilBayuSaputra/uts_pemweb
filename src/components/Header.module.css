@@ -1,0 +1,13 @@
+/* Pastikan namanya .headerContainer */
+.headerContainer {
+    padding: 20px;
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+}
+
+/* Pastikan namanya .title */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+}

@@ -1,0 +1,51 @@
+/* Di dalam file: src/components/FavoriteTable.module.css */
+
+.tableContainer {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #374151; /* Warna sama dengan form */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: white;
+  border-bottom: 1px solid #4b5563;
+  padding-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse; /* Garis tabel yang rapi */
+  color: #e5e7eb;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  border: 1px solid #4b5563;
+  text-align: left;
+}
+
+.table th {
+  background-color: #4b5563; /* Header tabel lebih gelap */
+  font-weight: 600;
+  color: white;
+}
+
+/* Efek belang-belang (zebra) agar mudah dibaca */
+.table tbody tr:nth-child(even) {
+  background-color: #424c5c; 
+}
+
+.message {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #d1d5db;
+  padding: 10px 0;
+}

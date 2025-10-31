@@ -1,0 +1,37 @@
+/* ... (semua style card Anda sebelumnya) ... */
+
+/* Style untuk tombol favorit */
+.favoriteButton {
+  margin-top: 15px; /* Jarak dari teks di atasnya */
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  background-color: #1d4ed8; /* Biru */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.card {
+  background-color: #374151; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  
+  /* 1. Tambahkan transisi */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 2. Tambahkan efek :hover */
+.card:hover {
+  transform: scale(1.03); /* Sedikit membesar */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Bayangan lebih jelas */
+}
+
+.favoriteButton:hover {
+  background-color: #1e40af;
+}

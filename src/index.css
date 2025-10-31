@@ -1,0 +1,19 @@
+/* Di dalam file: src/index.css */
+
+/* 1. Impor Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  
+  /* 2. Gunakan font baru */
+  font-family: 'Inter', sans-serif;
+  
+  background-color: #111827; /* Latar belakang lebih gelap */
+  color: rgba(255, 255, 255, 0.87);
+  
+  /* Sisanya biarkan sama */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

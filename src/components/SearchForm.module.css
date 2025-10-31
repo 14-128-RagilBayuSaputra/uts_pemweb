@@ -1,0 +1,61 @@
+/* Di dalam file: src/components/SearchForm.module.css */
+
+.formContainer {
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto; /* 40px spasi atas/bawah, auto spasi kiri/kanan (menengahkan) */
+  padding: 30px;
+  background-color: #374151; /* Abu-abu sedikit lebih terang */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.formGroup {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Label di atas, input di bawah */
+}
+
+.formGroup label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #d1d5db; /* Teks abu-abu terang */
+}
+
+.input,
+.select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  color: #e5e7eb;
+  background-color: #4b5563; /* Input field lebih gelap */
+  border: 1px solid #6b7280;
+  border-radius: 6px;
+  box-sizing: border-box; /* Pastikan padding tidak merusak lebar */
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #059669; /* Hijau */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #047857;
+}
+
+/* Style untuk pesan loading dan error */
+.loading,
+.error {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #fca5a5; /* Merah muda */
+}
