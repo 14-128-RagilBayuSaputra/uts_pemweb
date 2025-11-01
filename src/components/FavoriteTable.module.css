@@ -62,3 +62,21 @@
   color: #6b7280;
   padding: 40px 20px;
 }
+
+.deleteButton {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ef4444; /* Merah */
+  background-color: #fef2f2; /* Latar belakang merah muda */
+  border: 1px solid #fecaca; /* Border merah muda */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.deleteButton:hover {
+  background-color: #fee2e2; /* Latar sedikit lebih gelap */
+  color: #dc2626; /* Merah lebih gelap */
+  border-color: #fca5a5;
+}

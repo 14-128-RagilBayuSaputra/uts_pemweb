@@ -1,17 +1,26 @@
-/* src/components/Header.module.css */
+/* src/components/Header.module.css (VERSI PERBAIKAN FINAL UI) */
 
 .headerContainer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
+  padding: 20px 24px;
   background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .title {
-  font-size: 1.5rem;
+  /* --- PERUBAHAN FONT SIZE --- */
+  font-size: 1.8rem; /* Sedikit lebih besar dari 1.5rem */
   font-weight: 700;
   color: #1f2937;
   margin: 0;
@@ -48,13 +57,16 @@
 
 @media (max-width: 768px) {
   .headerContainer {
+    padding: 15px 20px;
+  }
+
+  .headerWrapper {
     flex-direction: column;
     gap: 15px;
-    padding: 15px 20px;
   }
   
   .title {
-    font-size: 1.3rem;
+    font-size: 1.5rem; /* Menyesuaikan untuk mobile */
   }
   
   .buttonGroup {
