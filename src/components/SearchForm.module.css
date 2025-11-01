@@ -1,61 +1,175 @@
-/* Di dalam file: src/components/SearchForm.module.css */
+/* src/components/SearchForm.module.css */
 
 .formContainer {
   width: 90%;
-  max-width: 600px;
-  margin: 40px auto; /* 40px spasi atas/bawah, auto spasi kiri/kanan (menengahkan) */
-  padding: 30px;
-  background-color: #374151; /* Abu-abu sedikit lebih terang */
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15),
+              0 0 0 1px rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  position: relative;
+  overflow: hidden;
+  animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.formContainer::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, 
+    transparent 30%, 
+    rgba(102, 126, 234, 0.1) 50%, 
+    transparent 70%);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
 }
 
 .formGroup {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   display: flex;
-  flex-direction: column; /* Label di atas, input di bawah */
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 .formGroup label {
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: #d1d5db; /* Teks abu-abu terang */
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #374151;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .input,
 .select {
   width: 100%;
-  padding: 12px;
+  padding: 16px 20px;
   font-size: 1rem;
-  color: #e5e7eb;
-  background-color: #4b5563; /* Input field lebih gelap */
-  border: 1px solid #6b7280;
-  border-radius: 6px;
-  box-sizing: border-box; /* Pastikan padding tidak merusak lebar */
+  color: #1f2937;
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  border-radius: 12px;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: #667eea;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15),
+              0 10px 30px rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+.input::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
 }
 
 .button {
   width: 100%;
-  padding: 12px;
+  padding: 18px;
   font-size: 1.1rem;
-  font-weight: bold;
+  font-weight: 800;
   color: white;
-  background-color: #059669; /* Hijau */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border: none;
-  border-radius: 6px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.3), 
+    transparent);
+  transition: left 0.5s;
+}
+
+.button:hover::before {
+  left: 100%;
 }
 
 .button:hover {
-  background-color: #047857;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
 }
 
-/* Style untuk pesan loading dan error */
+.button:active {
+  transform: translateY(-1px);
+}
+
 .loading,
 .error {
   text-align: center;
   padding: 40px;
   font-size: 1.2rem;
-  color: #fca5a5; /* Merah muda */
+  font-weight: 600;
+  border-radius: 16px;
+  margin: 40px auto;
+  max-width: 600px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loading {
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+  border: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.error {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  border: 2px solid rgba(239, 68, 68, 0.3);
 }

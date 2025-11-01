@@ -1,23 +1,17 @@
-// Di dalam file: src/components/SearchForm.jsx (VERSI LENGKAP)
+// src/components/SearchForm.jsx
 
 import React, { useState, useEffect } from 'react';
 import styles from './SearchForm.module.css';
 
-// URL API Departemen
 const API_URL = "https://collectionapi.metmuseum.org/public/collection/v1/departments";
 
-// 1. Terima 'onSearch' dari props
 function SearchForm({ onSearch }) {
-  // --- States ---
   const [departments, setDepartments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-
-  // State baru untuk menyimpan nilai form
   const [keyword, setKeyword] = useState("");
   const [selectedDept, setSelectedDept] = useState("");
 
-  // useEffect untuk fetch departemen (INI KODE YANG HILANG)
   useEffect(() => {
     async function fetchDepartments() {
       try {
@@ -35,25 +29,21 @@ function SearchForm({ onSearch }) {
     }
 
     fetchDepartments();
-  }, []); // Array dependensi kosong []
+  }, []);
 
-  // Fungsi handleSubmit
   const handleSubmit = (e) => {
     e.preventDefault();
     onSearch(keyword, selectedDept);
   };
 
-  // Render state loading (INI KODE YANG HILANG)
   if (isLoading) {
     return <div className={styles.loading}>Memuat departemen...</div>;
   }
 
-  // Render state error (INI KODE YANG HILANG)
   if (error) {
     return <div className={styles.error}>Error: {error}</div>;
   }
 
-  // Render form jika data sudah siap
   return (
     <form className={styles.formContainer} onSubmit={handleSubmit}>
       <div className={styles.formGroup}>
@@ -93,4 +83,3 @@ function SearchForm({ onSearch }) {
 }
 
 export default SearchForm;
-// (TIDAK ADA '}' EKSTRA DI SINI)

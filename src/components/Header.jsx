@@ -1,15 +1,27 @@
+// src/components/Header.jsx
 import React from 'react';
 import styles from './Header.module.css';
 
-function Header() {
+function Header({ onNavigate }) {
   return (
-    /* Pastikan di sini 'styles.headerContainer' */
-    <div className={styles.headerContainer}> 
-      {/* Pastikan di sini 'styles.title' */ }
-      <h1 className={styles.title}>
-        Museum Collection Explorer
-      </h1>
-    </div>
+    <header className={styles.headerContainer}>
+      <h1 className={styles.title}>Museum Collection Explorer</h1>
+      
+      <div className={styles.buttonGroup}>
+        <button 
+          className={styles.navButton}
+          onClick={() => onNavigate('favorites')}
+        >
+          📚 Daftar Favorit
+        </button>
+        <button 
+          className={styles.navButton}
+          onClick={() => onNavigate('feedback')}
+        >
+          ✉️ Berikan Feedback
+        </button>
+      </div>
+    </header>
   );
 }
 
