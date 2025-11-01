@@ -69,7 +69,7 @@ Jika Anda ingin menjalankan proyek ini di komputer lokal Anda, ikuti langkah-lan
 Berikut adalah screenshot dari tampilan aplikasi:
 
 **Halaman Beranda (Pencarian)**
-![Tampilan Halaman Beranda](./Screenshot/Screenshot-2025-11-01-231316.png)
+![Tampilan Halaman Beranda](./Screenshot/Beranda.png)
 
 **Halaman Favorit**
-![Tampilan Halaman Favorit](./Screenshot/Screenshot-2025-11-01-231339.png)
+![Tampilan Halaman Favorit](./Screenshot/Favorit.png)
