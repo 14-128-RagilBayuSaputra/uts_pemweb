@@ -70,7 +70,7 @@ Berikut adalah screenshot dari tampilan aplikasi:
 
 **Halaman Beranda (Pencarian)**
 *Menampilkan form pencarian dan hasil karya seni dalam bentuk grid.*
-![Tampilan Halaman Beranda](./Screenshot/Screenshot-2025-11-01-231316.jpg)
+![Tampilan Halaman Beranda](./Screenshot/Screenshot-2025-11-01-231316.png)
 
 **Halaman Favorit**
 *Menampilkan koleksi favorit pengguna dalam bentuk tabel yang dinamis.*
