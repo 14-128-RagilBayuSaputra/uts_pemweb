@@ -11,7 +11,7 @@ Proyek Ujian Tengah Semester (UTS) mata kuliah Pemrograman Web.
 
 Aplikasi ini telah di-deploy dan dapat diakses secara publik melalui link berikut:
 
-**[MASUKKAN_LINK_VERCEL_ANDA_DI_SINI]**
+**[uts-pemweb-opal.vercel.app]**
 
 ---
 
