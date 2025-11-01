@@ -1,12 +1,9 @@
-// Di dalam file: src/components/ArtworkGrid.jsx (VERSI FINAL - MENGURANGI JUMLAH FETCH)
-
 import React, { useState, useEffect } from 'react';
 import ArtworkCard from './ArtworkCard';
 import styles from './ArtworkGrid.module.css';
 
 const OBJECT_API_URL = "https://collectionapi.metmuseum.org/public/collection/v1/objects/";
 
-// Fungsi helper untuk memberi jeda
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 function ArtworkGrid({ objectIDs, favorites, onToggleFavorite }) {
@@ -34,8 +31,6 @@ function ArtworkGrid({ objectIDs, favorites, onToggleFavorite }) {
     };
 
     const fetchAllDetails = async () => {
-      // --- INI PERUBAHANNYA ---
-      // Kita kurangi jumlah data yang diambil dari 20 menjadi 12
       const idsToFetch = objectIDs.slice(0, 12); 
       const results = [];
       
@@ -46,7 +41,6 @@ function ArtworkGrid({ objectIDs, favorites, onToggleFavorite }) {
           results.push(artworkDetail);
         }
 
-        // Kita tetap pertahankan jeda 250ms untuk "sopan" ke server
         await delay(250); 
       }
       
@@ -85,4 +79,4 @@ function ArtworkGrid({ objectIDs, favorites, onToggleFavorite }) {
   );
 }
 
-export default ArtworkGrid;
+export default ArtworkGrid;p

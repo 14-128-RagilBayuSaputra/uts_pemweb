@@ -1,11 +1,10 @@
-/* src/components/Header.module.css (VERSI PERBAIKAN) */
-
 .headerContainer {
   display: flex;
   padding: 20px 24px;
   background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
   width: 100%;
 }
 
@@ -14,7 +13,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1280px;
+  
+  max-width: 1200px; 
   margin: 0 auto;
 }
 
@@ -31,25 +31,23 @@
   gap: 12px;
 }
 
-/* --- PERUBAHAN STYLE TOMBOL NON-AKTIF --- */
 .navButton {
   padding: 10px 24px;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #374151; /* Teks lebih gelap */
-  background-color: #f3f4f6; /* Latar abu-abu muda */
-  border: 1px solid #f3f4f6; /* Border sewarna */
+  color: #374151; 
+  background-color: #f3f4f6; 
+  border: 1px solid #f3f4f6; 
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .navButton:hover {
-  background-color: #e5e7eb; /* Hover lebih gelap */
+  background-color: #e5e7eb; 
   border-color: #e5e7eb;
 }
 
-/* Style tombol aktif tetap sama */
 .navButton.active {
   background-color: #3b82f6;
   color: white;

@@ -1,5 +1,3 @@
-// src/components/SearchForm.jsx
-
 import React, { useState, useEffect } from 'react';
 import styles from './SearchForm.module.css';
 

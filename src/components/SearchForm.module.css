@@ -1,4 +1,4 @@
-/* src/components/SearchForm.module.css */
+/* src/components/SearchForm.module.css (VERSI PERBAIKAN) */
 
 .formContainer {
   width: 90%;
@@ -7,7 +7,9 @@
   padding: 32px;
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  
+  /* --- PERUBAHAN SHADOW --- */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow lebih jelas */
   border: 1px solid #e5e7eb;
 }
 
@@ -17,6 +19,7 @@
   flex-direction: column;
 }
 
+/* ... (Sisa style .formGroup label, .input, .select, .button, .loading, .error tetap sama) ... */
 .formGroup label {
   margin-bottom: 8px;
   font-weight: 600;

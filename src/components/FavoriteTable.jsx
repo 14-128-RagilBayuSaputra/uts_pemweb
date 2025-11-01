@@ -1,11 +1,8 @@
-// Di dalam file: src/components/FavoriteTable.jsx (VERSI PERBAIKAN)
-
 import React, { useState, useEffect } from 'react';
 import styles from './FavoriteTable.module.css';
 
 const OBJECT_API_URL = "https://collectionapi.metmuseum.org/public/collection/v1/objects/";
 
-// Terima props baru: 'onToggleFavorite'
 function FavoriteTable({ favoriteIDs, onToggleFavorite }) {
   const [favoriteArtworks, setFavoriteArtworks] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -69,7 +66,6 @@ function FavoriteTable({ favoriteIDs, onToggleFavorite }) {
                 <td>{artwork.title || "Judul tidak diketahui"}</td>
                 <td>{artwork.artistDisplayName || "Artis tidak diketahui"}</td>
                 <td>{artwork.objectDate || "Tanggal tidak diketahui"}</td>
-                {/* Tambahkan Tombol Hapus di sini */}
                 <td>
                   <button 
                     className={styles.deleteButton}

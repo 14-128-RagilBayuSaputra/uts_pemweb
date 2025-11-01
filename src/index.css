@@ -7,9 +7,9 @@ body {
   padding: 0;
   font-family: 'Inter', sans-serif;
   
-  /* --- PERUBAHAN --- */
-  /* Mengganti warna solid dengan gradien halus */
-  background: linear-gradient(180deg, #ffffff 0%, #f3f4f6 300px);
+  /* --- PERUBAHAN LATAR BELAKANG --- */
+  /* Dimulai dari #f3f4f6 (abu-abu) dan berakhir di #e5e7eb (abu-abu lebih tua) */
+  background: linear-gradient(180deg, #f3f4f6 0%, #e5e7eb 400px);
   color: #1f2937;
   
   min-height: 100vh;
@@ -21,20 +21,17 @@ body {
   box-sizing: border-box;
 }
 
-/* Simple scrollbar */
+/* ... (Kode scrollbar tetap sama) ... */
 ::-webkit-scrollbar {
   width: 8px;
 }
-
 ::-webkit-scrollbar-track {
   background: #f3f4f6;
 }
-
 ::-webkit-scrollbar-thumb {
   background: #9ca3af;
   border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: #6b7280;
 }

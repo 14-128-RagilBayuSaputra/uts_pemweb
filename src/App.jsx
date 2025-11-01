@@ -1,4 +1,3 @@
-// src/App.jsx (VERSI PERBAIKAN FINAL UI)
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header.jsx';
 import SearchForm from './components/SearchForm.jsx';
@@ -13,7 +12,7 @@ const getInitialFavorites = () => {
 };
 
 function App() {
-  const [currentView, setCurrentView] = useState('search');
+  const [currentView, setCurrentView] =useState('search');
   const [objectIDs, setObjectIDs] = useState(null);
   const [isSearching, setIsSearching] = useState(false);
   const [searchError, setSearchError] = useState(null);
@@ -67,9 +66,10 @@ function App() {
   };
 
   const mainContentStyle = {
-    maxWidth: '1280px',
+    maxWidth: '1200px', 
     margin: '40px auto 0',
-    padding: '0 24px'
+    padding: '0 24px',
+    paddingBottom: '80px'
   };
 
   return (
@@ -91,7 +91,7 @@ function App() {
                 background: '#ffffff',
                 borderRadius: '12px',
                 border: '1px solid #e5e7eb',
-                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)'
+                boxShadow: '0 5px 15px rgba(0, 0, 0, 0.1)'
               }}>
                 <h2 style={{
                   fontSize: '2.25rem',
@@ -145,9 +145,10 @@ function App() {
                 fontWeight: '600',
                 borderRadius: '12px',
                 margin: '30px auto',
-                maxWidth: '600px'
+                maxWidth: '600px',
+                boxShadow: '0 5px 15px rgba(0, 0, 0, 0.1)'
               }}>
-                ⚠️ Error: {searchError}
+                 Error: {searchError}
               </div>
             )}
             
@@ -155,18 +156,19 @@ function App() {
               <>
                 <div style={{
                   textAlign: 'center',
-                  margin: '30px 0 20px'
+                  margin: '40px 0 30px'
                 }}>
                   <h2 style={{
-                    fontSize: '1.5rem',
-                    fontWeight: '700',
+                    fontSize: '2.25rem',
+                    fontWeight: '800',
                     color: '#1f2937'
                   }}>
                     Hasil Pencarian
                   </h2>
                   <p style={{
                     color: '#6b7280',
-                    fontSize: '1rem'
+                    fontSize: '1.1rem',
+                    marginTop: '12px'
                   }}>
                     Ditemukan {objectIDs.length > 12 ? '12+' : objectIDs.length} karya seni
                   </p>
@@ -187,7 +189,8 @@ function App() {
                 margin: '30px auto',
                 background: '#ffffff',
                 borderRadius: '12px',
-                border: '1px solid #e5e7eb'
+                border: '1px solid #e5e7eb',
+                boxShadow: '0 5px 15px rgba(0, 0, 0, 0.1)'
               }}>
                 <div style={{ fontSize: '3rem', marginBottom: '16px' }}>🔍</div>
                 <h3 style={{
@@ -216,12 +219,12 @@ function App() {
               marginBottom: '30px'
             }}>
               <h2 style={{
-                fontSize: '2rem',
-                fontWeight: '700',
+                fontSize: '2.25rem',
+                fontWeight: '800',
                 color: '#1f2937',
                 marginBottom: '12px'
               }}>
-                Koleksi Favorit Saya {/* Emoji 💙 dihapus */}
+                Koleksi Favorit Saya
               </h2>
               <p style={{
                 color: '#6b7280',
