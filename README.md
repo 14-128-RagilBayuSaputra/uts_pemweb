@@ -22,7 +22,7 @@ Aplikasi ini telah di-deploy dan dapat diakses secara publik melalui link beriku
 Aplikasi ini dibangun sebagai *Single Page Application* (SPA) di mana pengguna dapat bernavigasi antara halaman pencarian (Beranda) dan halaman koleksi favorit mereka tanpa me-refresh halaman.
 
 ## Fitur Utama
-
+p
 - **Pencarian Karya Seni:** Pengguna dapat mencari karya seni berdasarkan *keyword* (contoh: "Mona Lisa", "dog", dll).
 - **Filter Departemen:** Hasil pencarian dapat difilter berdasarkan 12 departemen resmi yang disediakan oleh API.
 - **Tampilan Detail:** Karya seni ditampilkan dalam bentuk kartu (card) yang memuat informasi penting seperti gambar, judul, artis, tanggal, medium, dan kultur.
@@ -70,8 +70,8 @@ Berikut adalah screenshot dari tampilan aplikasi:
 
 **Halaman Beranda (Pencarian)**
 *Menampilkan form pencarian dan hasil karya seni dalam bentuk grid.*
-![Tampilan Halaman Beranda](./screenshots/Screenshot-2025-11-01-231316.png)
+![Tampilan Halaman Beranda](./Screenshot/Screenshot-2025-11-01-231316.jpg)
 
 **Halaman Favorit**
 *Menampilkan koleksi favorit pengguna dalam bentuk tabel yang dinamis.*
-![Tampilan Halaman Favorit](./screenshots/Screenshot-2025-11-01-231339.png)
+![Tampilan Halaman Favorit](./Screenshot/Screenshot-2025-11-01-231339.png)
