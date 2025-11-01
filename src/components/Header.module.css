@@ -4,109 +4,57 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 50px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-bottom: 3px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.4);
-  position: relative;
-  overflow: hidden;
-}
-
-.headerContainer::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -10%;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: pulse 4s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.5;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.8;
-  }
+  padding: 20px 40px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .title {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
   margin: 0;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
-               0 0 40px rgba(102, 126, 234, 0.6);
-  letter-spacing: 1px;
-  position: relative;
-  z-index: 1;
 }
 
 .buttonGroup {
   display: flex;
-  gap: 15px;
-  position: relative;
-  z-index: 1;
+  gap: 12px;
 }
 
 .navButton {
-  padding: 12px 28px;
+  padding: 10px 24px;
   font-size: 0.95rem;
-  font-weight: 700;
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50px;
+  font-weight: 600;
+  color: #6b7280;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.navButton::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
-}
-
-.navButton:hover::before {
-  width: 300px;
-  height: 300px;
+  transition: all 0.2s ease;
 }
 
 .navButton:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.6);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+  background-color: #f3f4f6;
+  color: #374151;
+  border-color: #d1d5db;
 }
 
-.navButton:active {
-  transform: translateY(-1px);
+.navButton.active {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
 }
 
 @media (max-width: 768px) {
   .headerContainer {
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+    gap: 15px;
+    padding: 15px 20px;
   }
   
   .title {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
   
   .buttonGroup {
@@ -116,6 +64,5 @@
   .navButton {
     flex: 1;
     font-size: 0.85rem;
-    padding: 10px 20px;
   }
 }

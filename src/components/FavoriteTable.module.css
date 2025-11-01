@@ -4,99 +4,61 @@
   width: 90%;
   max-width: 1200px;
   margin: 40px auto;
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  border-radius: 24px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-  border: 2px solid rgba(102, 126, 234, 0.2);
-  animation: slideUp 0.6s ease-out;
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
 }
 
 .title {
   text-align: center;
   margin-top: 0;
-  margin-bottom: 30px;
-  font-size: 2rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border-bottom: 3px solid rgba(102, 126, 234, 0.2);
-  padding-bottom: 25px;
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 16px;
 }
 
 .table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
+  border-collapse: collapse;
   color: #1f2937;
-  overflow: hidden;
-  border-radius: 12px;
 }
 
 .table th,
 .table td {
-  padding: 18px 20px;
+  padding: 14px 16px;
   text-align: left;
-  border: none;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .table th {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  font-weight: 800;
-  color: white;
+  background-color: #f9fafb;
+  font-weight: 700;
+  color: #374151;
   text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.table th:first-child {
-  border-top-left-radius: 12px;
-}
-
-.table th:last-child {
-  border-top-right-radius: 12px;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
 }
 
 .table tbody tr {
-  transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.6);
-}
-
-.table tbody tr:nth-child(even) {
-  background: rgba(102, 126, 234, 0.05);
+  transition: background-color 0.2s ease;
 }
 
 .table tbody tr:hover {
-  background: rgba(102, 126, 234, 0.15);
-  transform: scale(1.01);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+  background-color: #f9fafb;
 }
 
-.table tbody td {
-  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
-  font-weight: 500;
+.table tbody tr:last-child td {
+  border-bottom: none;
 }
 
 .message {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #6b7280;
   padding: 40px 20px;
-  font-weight: 600;
 }

@@ -2,23 +2,23 @@
 import React from 'react';
 import styles from './Header.module.css';
 
-function Header({ onNavigate }) {
+function Header({ onNavigate, currentView }) {
   return (
     <header className={styles.headerContainer}>
       <h1 className={styles.title}>Museum Collection Explorer</h1>
       
       <div className={styles.buttonGroup}>
         <button 
-          className={styles.navButton}
-          onClick={() => onNavigate('favorites')}
+          className={`${styles.navButton} ${currentView === 'search' ? styles.active : ''}`}
+          onClick={() => onNavigate('search')}
         >
-          📚 Daftar Favorit
+          🏠 Beranda
         </button>
         <button 
-          className={styles.navButton}
-          onClick={() => onNavigate('feedback')}
+          className={`${styles.navButton} ${currentView === 'favorites' ? styles.active : ''}`}
+          onClick={() => onNavigate('favorites')}
         >
-          ✉️ Berikan Feedback
+          💙 Favorit
         </button>
       </div>
     </header>
