@@ -79,4 +79,4 @@ function ArtworkGrid({ objectIDs, favorites, onToggleFavorite }) {
   );
 }
 
-export default ArtworkGrid;p
+export default ArtworkGrid;
