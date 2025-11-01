@@ -1,4 +1,4 @@
-/* src/components/Header.module.css (VERSI PERBAIKAN FINAL UI) */
+/* src/components/Header.module.css (VERSI PERBAIKAN) */
 
 .headerContainer {
   display: flex;
@@ -19,8 +19,8 @@
 }
 
 .title {
-  /* --- PERUBAHAN FONT SIZE --- */
-  font-size: 1.8rem; /* Sedikit lebih besar dari 1.5rem */
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
   font-weight: 700;
   color: #1f2937;
   margin: 0;
@@ -31,24 +31,25 @@
   gap: 12px;
 }
 
+/* --- PERUBAHAN STYLE TOMBOL NON-AKTIF --- */
 .navButton {
   padding: 10px 24px;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #6b7280;
-  background-color: #f9fafb;
-  border: 1px solid #e5e7eb;
+  color: #374151; /* Teks lebih gelap */
+  background-color: #f3f4f6; /* Latar abu-abu muda */
+  border: 1px solid #f3f4f6; /* Border sewarna */
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .navButton:hover {
-  background-color: #f3f4f6;
-  color: #374151;
-  border-color: #d1d5db;
+  background-color: #e5e7eb; /* Hover lebih gelap */
+  border-color: #e5e7eb;
 }
 
+/* Style tombol aktif tetap sama */
 .navButton.active {
   background-color: #3b82f6;
   color: white;
@@ -66,7 +67,7 @@
   }
   
   .title {
-    font-size: 1.5rem; /* Menyesuaikan untuk mobile */
+    font-size: 1.8rem;
   }
   
   .buttonGroup {
